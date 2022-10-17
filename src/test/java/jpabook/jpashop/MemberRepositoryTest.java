@@ -21,7 +21,7 @@ public class MemberRepositoryTest {
     @Test
     @Transactional
     // 원래 Test가 끝나면 DB가 ROLLBACK이 되지만 내가 직접 눈으로 확인하고 싶을 때 사용. 그냥 commit을 해버린다.
-    // @Rollback(false)
+    @Rollback(false)
     public void testMember() throws Exception {
         // given
         Member member = new Member();
