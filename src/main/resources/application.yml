@@ -1,0 +1,19 @@
+spring:
+  datasource:
+  url: jdbc:h2:tcp://localhost/~/jpashop
+  username: sa
+  password:
+  driver-class-name: org.h2.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate: # 하이버네이트에 대한 특정한 속성 설정
+        # show_sql: true
+        format_sql: true
+
+logging.level:
+  # 하이버네이트가 실행한 모든 SQL문이 log에 출력한다. 개발 시 system.out이 아닌 log에 출력하도록 해야 한다.
+  org.hibernate.SQL: debug
+ # org.hibernate.type: trace
