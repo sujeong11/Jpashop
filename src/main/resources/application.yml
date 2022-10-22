@@ -13,11 +13,6 @@ spring:
         # show_sql: true
         format_sql: true
 
-  # 기본 설정
-  thymeleaf:
-    prefix: classpath:/templates/
-    suffix: .html
-
 logging.level:
   # 하이버네이트가 실행한 모든 SQL문이 log에 출력한다. 개발 시 system.out이 아닌 log에 출력하도록 해야 한다.
   org.hibernate.SQL: debug
