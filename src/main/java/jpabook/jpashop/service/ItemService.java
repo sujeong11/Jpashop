@@ -20,6 +20,15 @@ public class ItemService {
         itemRepository.save(item);
     }
 
+    @Transactional
+    public void updateItem(Long itemId, String name, int price, int stockQuantity) {
+        Item findItem = itemRepository.findOne(itemId);
+        // 실무) setter를 사용하지 말고 의미있는 메소드를 만들어서 활용 -> 어디서 변경하는지 쉽게 추적 가능.
+        findItem.setName(name);
+        findItem.setPrice(price);
+        findItem.setStockQuantity(stockQuantity);
+    }
+
     public List<Item> findItems() {
         return itemRepository.findAll();
     }
