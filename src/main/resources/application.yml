@@ -7,7 +7,7 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: none
+      ddl-auto: create
     properties:
       hibernate: # 하이버네이트에 대한 특정한 속성 설정
         # show_sql: true
