@@ -92,6 +92,7 @@ public class OrderQueryRepository {
         return orderItems.stream().collect(Collectors.groupingBy(OrderItemQueryDto::getOrderId));
     }
 
+    // 최적화2) 플랫 데이터 최적화
     public List<OrderFlatDto> findAllByDto_flat() {
         return em.createQuery(
             "select new jpabook.jpashop.repository.order.query.OrderFlatDto(o.id, m.name, o.orderDate, o.status, d.address, i.name, oi.orderPrice, oi.count)" +
